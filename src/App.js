@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+const name = 'Natasha';
+const age = 28;
+
 function App() {
   return (
     <div className="App">
@@ -9,8 +12,24 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <p style={{
+          fontWeight: 700
+        }}>
+          Hello {name}!
+          <p>You are {age} y.o</p>
+          <p>You will live {age * 2} more years</p>
+        </p>
         <p>
-          Hello world!
+          {name === 'Natasha' && age !== 18 && 'Пить можно'}
+        </p>
+        <p>
+        {age > 18 ? 'Пить можно' : 'Пить нельзя'}
+        </p>
+        <p>
+          {undefined}
+          {true}
+          {false}
+          {null}
         </p>
         <a
           className="App-link"
