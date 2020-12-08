@@ -1,50 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import { count, length } from './number';
+import React from 'react';
 
-const name = 'Natasha';
-const age = 28;
+const ItemList = () => (
+  <ul>
+    <li>Проснуться</li>
+    <li>Умыться</li>
+    <li>Почистить зубы</li>
+    <li>Позавтракать</li>
+  </ul>
+);
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p style={{
-          fontWeight: 700
-        }}>
-          Hello {name}!
-          <p>You are {age} y.o</p>
-          <p>You will live {age * 2} more years</p>
-        </p>
-        <p>
-          {name === 'Natasha' && age !== 18 && 'Пить можно'}
-        </p>
-        <p>
-        {age > 18 ? 'Пить можно' : 'Пить нельзя'}
-        </p>
-        <p>
-          {undefined}
-          {true}
-          {false}
-          {null}
-        </p>
-        <p>{count} * {length} = { count * length }</p>
-        <p>count * length = { count * length }</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+<div>
+  <h1>Список дел:</h1>
+  <ItemList />
+</div>
+);
 
 export default App;
