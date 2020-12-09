@@ -2,16 +2,29 @@ import React from 'react';
 import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
+import style from './App.module.css';
 
-const todoItem = 'Написать новое приложение';
+const App = () => {
+  const items = [
+    {
+      value: 'Написать новое приложение'
+    },
+    {
+      value: 'прописать props'
+    },
+    {
+      value: 'изучить тему'
+    }
+  ];
 
-const App = () => (
-<div>
-  <h1>todos</h1>
-  <InputItem />
-  <ItemList todoItem={todoItem} />
-  <Footer count={3} />
-</div>
-);
+  return (
+  <div className={style.wrap}>
+    <h1 className={style.title}>todos</h1>
+    <InputItem />
+    <ItemList items={items} />
+    <Footer count={3} />
+  </div>
+  );
+}
 
 export default App;
