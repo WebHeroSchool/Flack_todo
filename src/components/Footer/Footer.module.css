@@ -1,0 +1,8 @@
+.text {
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}

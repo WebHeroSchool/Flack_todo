@@ -1,8 +1,14 @@
 .wrap {
   margin: auto;
-  width: 300px;
+  width: 600px;
+  border: 2px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 5px 2px 15px #000;
 }
 
 .title {
   font-family: fantasy;
+  text-align: center;
+  font-size: 48px;
 }
