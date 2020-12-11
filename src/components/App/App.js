@@ -5,31 +5,33 @@ import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
 class App extends React.Component {
-  render() {
-    const items = [
-      {
-        value: 'Написать новое приложение',
-        isDone: true
-      },
-      {
-        value: 'прописать props',
-        isDone: false
-      },
-      {
-        value: 'изучить тему',
-        isDone: false
+  state = {
+        items: [
+          {
+            value: 'Написать новое приложение',
+            isDone: true
+          },
+          {
+            value: 'прописать props',
+            isDone: false
+          },
+          {
+            value: 'изучить тему',
+            isDone: false
+          }
+        ]
+      };
+
+      render() {
+        return (
+        <div className={styles.wrap}>
+          <h1 className={styles.title}>todos</h1>
+          <InputItem />
+          <ItemList items={this.state.items} />
+          <Footer count={2} />
+        </div>
+        );
       }
-    ];
-  
-    return (
-    <div className={styles.wrap}>
-      <h1 className={styles.title}>todos</h1>
-      <InputItem />
-      <ItemList items={items} />
-      <Footer count={2} />
-    </div>
-    );
-  }
 };
 
 export default App;
