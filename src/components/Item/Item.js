@@ -5,7 +5,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-const Item = ({ value, isDone, onClickDone }) => (
+const Item = ({ value, isDone, onClickDone, id }) => (
     <span className={
     classnames({
     [styles.item]: true,
@@ -15,7 +15,7 @@ const Item = ({ value, isDone, onClickDone }) => (
     <Checkbox
     className={styles.checkboxes}
     checked={isDone}
-    onClick={() => onClickDone(isDone)}
+    onClick={() => onClickDone(id)}
     color="default"
     inputProps={{ 'aria-label': 'checkbox with default color' }}
     />
