@@ -3,7 +3,7 @@ import Item from '../Item/Item';
 import styles from './ItemList.module.css';
 import Grid from '@material-ui/core/Grid';
 
-const ItemList = ({ items }) => (
+const ItemList = ({ items, onClickDone }) => (
   <ul className={styles.list}>
     {items.map(item => <li key={item.value}>
       <Grid
@@ -12,7 +12,7 @@ const ItemList = ({ items }) => (
     justify="center"
     alignItems="flex-start"
     >
-    <Item value={item.value} isDone={item.isDone} /></Grid></li>)}
+    <Item value={item.value} isDone={item.isDone} onClickDone={onClickDone} /></Grid></li>)}
     
   </ul>
 );
