@@ -6,3 +6,11 @@
   color: #c4c4c4;
   text-decoration: line-through;
 }
+
+/* .checkboxes {
+  grid-template-columns: 1fr 1fr 1fr;
+} */
+
+.icon {
+  display: inline-flex;
+}

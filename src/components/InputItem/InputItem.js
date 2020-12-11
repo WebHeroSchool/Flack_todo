@@ -7,6 +7,7 @@ const InputItem = () => (
       label="Добавить задание"
       id="outlined-margin-normal"
       margin="dense"
+      fullWidth
       variant="outlined"
     />
   </div>
