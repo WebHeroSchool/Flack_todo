@@ -7,9 +7,9 @@
   text-decoration: line-through;
 }
 
-.checkboxes {
+/* .checkboxes {
   grid-template-columns: 1fr 1fr 1fr;
-}
+} */
 
 .icon {
   display: inline-flex;
