@@ -10,17 +10,17 @@ class App extends React.Component {
           {
             value: 'Написать новое приложение',
             isDone: true,
-            id: 1
+            id: 0
           },
           {
             value: 'прописать props',
             isDone: false,
-            id: 2
+            id: 1
           },
           {
             value: 'изучить тему',
             isDone: false,
-            id: 3
+            id: 2
           },
         ],
         count: 2
@@ -67,8 +67,7 @@ class App extends React.Component {
           onClickDone={this.onClickDone} 
           onClickDelete={this.onClickDelete} 
           />
-          <Footer count={this.state.count} 
-          />
+          <Footer />
         </div>
         );
       }

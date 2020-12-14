@@ -16,4 +16,14 @@ const ItemList = ({ items, onClickDone, onClickDelete }) => (
   </ul>
 );
 
+ItemList.defaultProps = {
+  items: [
+    {
+      value: 'Пусто',
+      isDone: false,
+      id: 0
+    }
+  ]
+}
+
 export default ItemList;
