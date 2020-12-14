@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import { LensTwoTone } from '@material-ui/icons';
 
 let helper = "Добавить задание";
 let text;
+
 class InputItem extends React.Component {
     state = {
       inputValue: ''
@@ -50,5 +51,8 @@ class InputItem extends React.Component {
   }
 }
 
+TextField.PropTypes = {
+  inputValue: PropTypes.string
+}
 
 export default InputItem;

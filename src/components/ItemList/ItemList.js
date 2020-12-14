@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Item from '../Item/Item';
 import styles from './ItemList.module.css';
 
@@ -24,6 +25,14 @@ ItemList.defaultProps = {
       id: 0
     }
   ]
-}
+};
+
+ItemList.propTypes = {
+  items: PropTypes.array,
+  value: PropTypes.string,
+  isDone: PropTypes.bool,
+  id: PropTypes.number
+};
+
 
 export default ItemList;
