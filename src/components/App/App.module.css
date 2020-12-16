@@ -1,14 +1,24 @@
 .wrap {
   margin: auto;
   width: 600px;
+  height: 550px;
   border: 2px solid #c4c4c4;
   border-radius: 10px;
   padding: 25px;
   box-shadow: 5px 2px 15px #000;
+  display: flex;
 }
 
-.title {
-  font-family: fantasy;
-  text-align: center;
-  font-size: 48px;
+.content {
+  width: 600px;
+  border: 2px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 5px 2px 15px #000;
+  display: block;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
 }
