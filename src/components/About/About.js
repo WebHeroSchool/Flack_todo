@@ -13,7 +13,6 @@ class About extends React.Component {
     repoList: [],
     loadFailure: false,
     userInfo: {},
-    message: '',
     userLogin: 'Nataly815'
   }
 
@@ -48,7 +47,7 @@ class About extends React.Component {
   }
   
   render() {
-    const { isLoading, repoList, userInfo, loadFailure, message } = this.state;
+    const { isLoading, repoList, userInfo, loadFailure } = this.state;
 
     return (
     <>
