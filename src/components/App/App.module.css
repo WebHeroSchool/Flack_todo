@@ -8,6 +8,7 @@
   padding: 25px;
   box-shadow: 5px 2px 15px #000;
   display: flex;
+  font-family: Roboto, sans-serif;
 }
 
 .content {

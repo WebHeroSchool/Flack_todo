@@ -1,9 +1,136 @@
 .title {
   font-family: fantasy;
   text-align: center;
-  font-size: 48px;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+}
+
+.contacts {
+  display: flex;
+  height: fit-content;
 }
 
 .info {
+  font-weight: 400;
+  font-size: 14px;
+  color: #999999;
+  font-family: Roboto, sans-serif;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+p {
+  margin: 8px;
+}
+
+img {
+  padding-right: 5px;
+}
+
+.info > a {
+  text-decoration: none;
+  color: #999999;
+  font-size: 14px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  width: -webkit-fill-available;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.repos {
+  display: flex;
+  justify-content: center;
+}
+
+.repo {
+  text-decoration: none;
+  color: #000;
+  font-family: Roboto, sans-serif;
   font-weight: 700;
 }
+
+.repoItem {
+  border: 1px solid #999999;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: auto;
+  height: 250px;
+  padding-right: 5px;
+}
+
+  ::-webkit-scrollbar-button {
+    background-image:url('');
+    background-repeat:no-repeat;
+    width: 5px;
+    height: 0px
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    min-height: 50px;
+    background-color: #CCCCCC;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background-color: #999999;
+  }
+  
+  ::-webkit-resizer{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width: 4px;
+    height: 0px
+  }
+  
+  ::-webkit-scrollbar{
+    width: 6px;
+  }
+
+  .lang {
+    position: relative;
+  }
+
+  .html::before,
+  .css::before,
+  .js::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    color: #e34c26;
+    border-radius: 50%;
+  }
+
+  .css::before {
+    color: #563d7c;
+  }
+
+  .js::before {
+    color: #f1e05a;
+  }
