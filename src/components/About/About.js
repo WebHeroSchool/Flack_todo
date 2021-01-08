@@ -20,7 +20,7 @@ class About extends React.Component {
     repoList: [],
     loadFailure: false,
     userInfo: {},
-    userLogin: 'Nataly815',
+    userLogin: 'sdfsdgf',
     loadSuccess: false,
     error: null
   }
@@ -53,7 +53,6 @@ class About extends React.Component {
         this.setState({
           userInfo: data,
           isLoading: false,
-          isEmpty: false
         }))
   }
 
@@ -81,10 +80,10 @@ class About extends React.Component {
           <hr></hr>
         {!isLoading &&
           <div className={styles.repos}>
-            {!loadSuccess ? <><h3> <EmptyImage /> Репозитории отсутствуют </h3>
+            {!loadSuccess ? <><h3>  <img src={require('./img/emptyImage.png')} /> <p> Репозитории отсутствуют </p></h3>
             <p> Добавьте как минимум один репозиторий на <a href='https://github.com' target='_blank'>github.com</a></p></> :
             <div className={styles.fail}>
-            {!loadFailure ? <><h3><ErrorImage /> Что-то пошло не так... + {error.message}</h3>
+            {loadFailure ? <><h3> <img src={require('./img/error.png')} /> <p>Что-то пошло не так... {error}</p></h3>
             <p> Попробуйте <a href='#' target='_blank'> загрузить </a> еще раз</p></> :
             <>
               <h2>Мои репозитории:</h2>
