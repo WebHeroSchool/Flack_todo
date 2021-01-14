@@ -6,24 +6,8 @@ import Footer from '../Footer/Footer';
 
 const App = () => {
   const initialState = {
-        items: [
-          {
-            value: 'Написать новое приложение',
-            isDone: false,
-            id: 0
-          },
-          {
-            value: 'прописать props',
-            isDone: false,
-            id: 1
-          },
-          {
-            value: 'изучить тему',
-            isDone: false,
-            id: 2
-          },
-        ],
-        count: 3
+        items: [],
+        count: 0
       };
 const [items, setTodoItem] = useState(initialState.items);
 const [count, setCount] = useState(initialState.count);

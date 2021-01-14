@@ -51,6 +51,10 @@ img {
   border-radius: 10px;
 }
 
+.subtitle {
+  text-align: left;
+}
+
 .repos {
   display: flex;
   justify-content: center;
@@ -61,12 +65,23 @@ img {
   color: #000;
   font-family: Roboto, sans-serif;
   font-weight: 700;
+  font-size: 14px;
+}
+
+.repository {
+  display: inline-grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  font-size: 12px;
+  width: -webkit-fill-available;
+  align-items: center;
 }
 
 .repoItem {
   border: 1px solid #999999;
   border-radius: 10px;
   padding: 5px;
+  width: 500px;
   margin-bottom: 10px;
 }
 
@@ -74,8 +89,16 @@ ul {
   list-style-type: none;
   padding: 0;
   overflow: auto;
-  height: 250px;
+  height: 300px;
   padding-right: 5px;
+}
+
+.main {
+  margin: 0 auto;
+}
+
+.fail {
+  text-align: center;
 }
 
   ::-webkit-scrollbar-button {
@@ -113,24 +136,35 @@ ul {
 
   .lang {
     position: relative;
+    display: flex;
+    align-items: center;
   }
 
   .html::before,
   .css::before,
-  .js::before {
-    position: absolute;
+  .js::before,
+  .undef::before {
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
-    color: #e34c26;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: #e34c26;
     border-radius: 50%;
   }
 
   .css::before {
-    color: #563d7c;
+    background-color: #563d7c;
   }
 
   .js::before {
-    color: #f1e05a;
+    background-color: #f1e05a;
+  }
+
+  .undef::before {
+    background-color: #c4c4c4;
+  }
+
+  .forks, .stars {
+    margin-left: 10px;
   }

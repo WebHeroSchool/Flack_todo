@@ -7,7 +7,7 @@ import Todo from '../Todo/Todo';
 import About from '../About/About';
 
 const App = () => (
-  <Router>
+  <Router className={styles.menu}>
     <div className={styles.wrap}>
           <MenuList>
             <Link to='/' className={styles.link}><MenuItem>Обо мне</MenuItem></Link>

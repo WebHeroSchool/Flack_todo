@@ -12,7 +12,6 @@ const Footer = ({count}) => (
     <Button className={styles.button} variant="outlined">Все</Button>
     <Button className={styles.button}>Активные</Button>
     <Button className={styles.button}>Выполненные</Button>
-    <Button className={styles.button}>Удалить выполненные дела</Button>
   </ButtonGroup>
 </div>
 );
