@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Flack_todo/static/css/main.5e83ba26.chunk.css",
+    "main.js": "/Flack_todo/static/js/main.249d96fe.chunk.js",
+    "main.js.map": "/Flack_todo/static/js/main.249d96fe.chunk.js.map",
+    "runtime-main.js": "/Flack_todo/static/js/runtime-main.48af7236.js",
+    "runtime-main.js.map": "/Flack_todo/static/js/runtime-main.48af7236.js.map",
+    "static/js/2.ee376cea.chunk.js": "/Flack_todo/static/js/2.ee376cea.chunk.js",
+    "static/js/2.ee376cea.chunk.js.map": "/Flack_todo/static/js/2.ee376cea.chunk.js.map",
+    "index.html": "/Flack_todo/index.html",
+    "static/css/main.5e83ba26.chunk.css.map": "/Flack_todo/static/css/main.5e83ba26.chunk.css.map",
+    "static/js/2.ee376cea.chunk.js.LICENSE.txt": "/Flack_todo/static/js/2.ee376cea.chunk.js.LICENSE.txt",
+    "static/media/WHS.09b72553.png": "/Flack_todo/static/media/WHS.09b72553.png",
+    "static/media/emptyImage.2fdbf894.png": "/Flack_todo/static/media/emptyImage.2fdbf894.png",
+    "static/media/error.46bcde56.png": "/Flack_todo/static/media/error.46bcde56.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.48af7236.js",
+    "static/js/2.ee376cea.chunk.js",
+    "static/css/main.5e83ba26.chunk.css",
+    "static/js/main.249d96fe.chunk.js"
+  ]
+}
