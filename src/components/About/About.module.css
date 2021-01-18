@@ -138,6 +138,7 @@ ul {
     position: relative;
     display: flex;
     align-items: center;
+    margin-right: 3px;
   }
 
   .html::before,
@@ -167,4 +168,84 @@ ul {
 
   .forks, .stars {
     margin-left: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .repoItem {
+      width: 405px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .repoItem {
+      width: 325px;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .repoItem {
+      width: 300px;
+    }
+    
+    .avatar {
+      width: 125px;
+      height: 125px;
+    }
+
+    .title {
+      font-size: 17px;
+    }
+
+    .info {
+      font-size: 13px;
+    }
+
+    .info > a {
+      font-size: 13px;
+    }
+
+    .wrapper {
+      width: 175px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .wrapper {
+      margin-left: 3px;
+      width: 165px;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+    }
+
+    .title {
+      font-size: 15px;
+    }
+
+    .info {
+      font-size: 12px;
+    }
+
+    .info > a {
+      font-size: 12px;
+    }
+
+    .repoItem {
+      width: 245px;
+    }
+
+    .repository p {
+      font-size: 10px;
+    }
+
+    .lang {
+      font-size: 10px;
+    }
   }
