@@ -6,64 +6,86 @@ import Footer from '../Footer/Footer';
 
 const App = () => {
   const initialState = {
-        items: [],
-        count: 0
-      };
+    items: JSON.parse(localStorage.getItem('items')) || [],
+    count: JSON.parse(localStorage.getItem('count')) || 0,
+    all: JSON.parse(localStorage.getItem('all')) || 0,
+    filter: 'all'
+  };
+
 const [items, setTodoItem] = useState(initialState.items);
 const [count, setCount] = useState(initialState.count);
+const [filter, setFilter] = useState(initialState.filter);
+const [all, setAll] = useState(initialState.all);
 
 useEffect(() => {
-  console.log('update');
-});
+  localStorage.setItem('items', JSON.stringify(items));
+  localStorage.setItem('count', JSON.stringify(count));
+  localStorage.setItem('all', JSON.stringify(all));
+	}, [items, count, all]);
 
-useEffect(() => {
-  console.log('mount');
-}, []);
+const onClickDone = id => {
+  const newItemList = items.map(item => {
+    const newItem = {...item};
+    if(item.id === id){
+      newItem.isDone = !item.isDone;
+    }
 
-      const onClickDone = id => {
-        const newItemList = items.map(item => {
-          const newItem = {...item};
-          if(item.id === id){
-            newItem.isDone = !item.isDone;
-          }
+    return newItem;
+  });
+  const newCount = newItemList.filter(newItem => newItem.isDone !== true).length;
+  setCount(newCount);
+  setTodoItem(newItemList);
+};
 
-          return newItem;
-        });
+const onClickDelete = id => {
+  const newItemList = items.filter(item => item.id !== id);
+  setTodoItem(newItemList);
+  setCount(count - 1);
+};
 
-        setTodoItem(newItemList)
-      };
+const onClickAdd = value => {
+  const newItems = [
+    ...items,
+    {
+      value,
+      isDone: false,
+      id: all + 1
+    }
+  ];
+  setTodoItem(newItems);
+  setCount(count => count + 1);
+  setAll(all => all + 1);
+}
 
-      const onClickDelete = id => {
-        const newItemList = items.filter(item => item.id !== id);
-        setTodoItem(newItemList);
-        setCount(count => count - 1);
-      };
+const filterItems = () => {
+  if (filter === 'all') {
+    return items;
+  } else if (filter === 'active') {
+    return items.filter((item) => !item.isDone);
+  } else if (filter === 'done') {
+    return items.filter((item) => item.isDone);
+  }
+};
+const onClickFilter = filter => {
+  setFilter(filter);
+}
 
-      const onClickAdd = value => {
-        const newItems = [
-          ...items,
-          {
-            value,
-            isDone: false,
-            id: count + 1
-          }
-        ];
-        setTodoItem(newItems);
-        setCount(count => count + 1);
-      }
-
-        return (
-          <>
-          <h1 className={styles.title}>Задачи</h1>
-          <InputItem onClickAdd={onClickAdd} />
-          <ItemList
-          items={items} 
-          onClickDone={onClickDone} 
-          onClickDelete={onClickDelete} 
-          />
-          <Footer count={count} />
-          </>
-        );
+  return (
+    <>
+    <h1 className={styles.title}>Задачи</h1>
+    <InputItem onClickAdd={onClickAdd} 
+    items={items} />
+    <ItemList
+    items={items} 
+    filterItems={filterItems}
+    onClickDone={onClickDone} 
+    onClickDelete={onClickDelete} 
+    />
+    <Footer count={count}
+    filter={filter}
+    onClickFilter={onClickFilter} />
+    </>
+  );
 };
 
 export default App;

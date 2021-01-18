@@ -18,8 +18,10 @@ class InputItem extends React.Component {
       if (!this.state.inputValue) {
         helper = 'Пустое поле! Добавьте задание.';
         text = '';
+      } else if (this.props.items.find((item) => this.state.inputValue === item.value)) {
+        helper = 'Это задание уже есть! Добавьте новое задание.';
+        text = '';
       } else {
-      
       this.props.onClickAdd(this.state.inputValue.toUpperCase());
       helper = 'Добавить задание';
       text = undefined;
@@ -27,7 +29,7 @@ class InputItem extends React.Component {
     }
 
     render() {
-      //const { onClickAdd } = this.props;
+      const { onClickAdd, items } = this.props;
 
       return (<div>
           <TextField
