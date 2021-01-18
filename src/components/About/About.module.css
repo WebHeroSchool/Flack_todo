@@ -69,8 +69,8 @@ img {
 
 .repository {
   display: inline-grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 30% 20% 20% 30%;
+  grid-template-rows: 100%;
   font-size: 12px;
   width: -webkit-fill-available;
   align-items: center;
@@ -118,10 +118,6 @@ ul {
   background-color: #ccc;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: #999;
-}
-
 ::-webkit-resizer {
   background-image: url('');
   background-repeat: no-repeat;
@@ -131,6 +127,10 @@ ul {
 
 ::-webkit-scrollbar {
   width: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
 }
 
 .lang {
@@ -165,86 +165,87 @@ ul {
   background-color: #c4c4c4;
 }
 
-.forks, .stars {
+.forks,
+.stars {
   margin-left: 10px;
 }
 
-  @media (max-width: 768px) {
-    .repoItem {
-      width: 405px;
-    }
+@media (max-width: 768px) {
+  .repoItem {
+    width: 405px;
+  }
+}
+
+@media (max-width: 600px) {
+  .repoItem {
+    width: 325px;
+  }
+}
+
+@media (max-width: 425px) {
+  .repoItem {
+    width: 300px;
   }
   
-  @media (max-width: 600px) {
-    .repoItem {
-      width: 325px;
-    }
+  .avatar {
+    width: 125px;
+    height: 125px;
   }
-  
-  @media (max-width: 425px) {
-    .repoItem {
-      width: 300px;
-    }
-    
-    .avatar {
-      width: 125px;
-      height: 125px;
-    }
 
-    .title {
-      font-size: 17px;
-    }
-
-    .info {
-      font-size: 13px;
-    }
-
-    .info > a {
-      font-size: 13px;
-    }
-
-    .wrapper {
-      width: 175px;
-    }
-
-    .subtitle {
-      font-size: 20px;
-      text-align: center;
-    }
+  .title {
+    font-size: 17px;
   }
-  
-  @media (max-width: 375px) {
-    .wrapper {
-      margin-left: 3px;
-      width: 165px;
-    }
 
-    .avatar {
-      width: 100px;
-      height: 100px;
-    }
-
-    .title {
-      font-size: 15px;
-    }
-
-    .info {
-      font-size: 12px;
-    }
-
-    .info > a {
-      font-size: 12px;
-    }
-
-    .repoItem {
-      width: 245px;
-    }
-
-    .repository p {
-      font-size: 10px;
-    }
-
-    .lang {
-      font-size: 10px;
-    }
+  .info {
+    font-size: 13px;
   }
+
+  .info > a {
+    font-size: 13px;
+  }
+
+  .wrapper {
+    width: 175px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    margin-left: 3px;
+    width: 165px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .info {
+    font-size: 12px;
+  }
+
+  .info > a {
+    font-size: 12px;
+  }
+
+  .repoItem {
+    width: 245px;
+  }
+
+  .repository p {
+    font-size: 10px;
+  }
+
+  .lang {
+    font-size: 10px;
+  }
+}
