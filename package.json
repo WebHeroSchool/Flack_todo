@@ -1,5 +1,5 @@
 {
-  "name": "todo",
+  "name": "Flack_todo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
+    "gh-pages": "^3.1.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -16,6 +17,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,5 +45,6 @@
   "devDependencies": {
     "@material-ui/core": "^4.11.2",
     "classnames": "^2.2.6"
-  }
+  },
+  "homepage": "https://webheroschool.github.io/Flack_todo/"
 }
