@@ -1,13 +1,10 @@
 .wrap {
-  margin: auto;
-  width: 600px;
   min-height: 450px;
   max-height: fit-content;
-  border: 2px solid #c4c4c4;
-  border-radius: 10px;
   padding: 25px;
-  box-shadow: 5px 2px 15px #000;
   display: flex;
+  justify-content: center;
+  font-family: Roboto, sans-serif;
 }
 
 .content {
@@ -17,11 +14,99 @@
   border: 2px solid #c4c4c4;
   border-radius: 10px;
   padding: 25px;
-  box-shadow: 5px 2px 15px #000;
+  box-shadow: 1px 2px 5px #000;
   display: block;
 }
 
 .link {
   text-decoration: none;
   color: #000;
+}
+
+.menulist {
+  border: 2px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 25px;
+  height: auto;
+  box-shadow: 1px 2px 5px #000;
+  margin-right: 20px !important;
+}
+
+.school {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+  }
+
+  .menulist {
+    width: 575px;
+    margin: 0 0 20px 0 !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .school {
+    width: 30%;
+  }
+
+  .content {
+    width: 525px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menulist {
+    width: 490px;
+  }
+
+  .school {
+    width: 25%;
+  }
+
+  .content {
+    width: 440px;
+  }
+}
+
+@media (max-width: 500px) {
+  .menulist {
+    width: 400px;
+  }
+
+  .school {
+    width: 20%;
+  }
+
+  .content {
+    width: 350px;
+  }
+}
+
+@media (max-width: 425px) {
+  .menulist {
+    width: 360px;
+  }
+
+  .content {
+    width: 310px;
+  }
+}
+
+@media (max-width: 375px) {
+  .menulist {
+    width: 300px;
+  }
+
+  .content {
+    width: 260px;
+    padding: 20px;
+  }
 }
